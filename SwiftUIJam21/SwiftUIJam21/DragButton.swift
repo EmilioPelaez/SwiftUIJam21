@@ -44,12 +44,14 @@ struct DragButton: View {
 							Capsule()
 								.fill(Color(.systemRed))
 								.frame(height: 1 + Double(notches - index) * 0.2)
-								.transition(AnyTransition.opacity.combined(with: .scale(scale: 2)).animation(.linear.delay(0.2 + 0.05 * Double(index))))
+								.transition(.opacity)
+//								.transition(.opacity.combined(with: .scale(scale: 2)).animation(.linear.delay(0.2 + 0.05 * Double(index))))
 						}
 					}
 				}
-				.padding(expanded ? EdgeInsets(top: 15, leading: 4, bottom: thumbSize + 5, trailing: 4) : EdgeInsets())
-				
+				.padding(.horizontal, 4)
+				.padding(.top, expanded ? 15 : 0)
+				.padding(.bottom, expanded ? thumbSize + 5 : 9)
 			}
 			.frame(height: expanded ? expandedHeight : thumbSize)
 		}
