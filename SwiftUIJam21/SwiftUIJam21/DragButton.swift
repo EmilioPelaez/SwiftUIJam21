@@ -44,8 +44,9 @@ struct DragButton: View {
 							Capsule()
 								.fill(Color(.systemRed))
 								.frame(height: 1 + Double(notches - index) * 0.2)
-								.transition(.opacity)
-//								.transition(.opacity.combined(with: .scale(scale: 2)).animation(.linear.delay(0.2 + 0.05 * Double(index))))
+								.transition(.asymmetric(insertion: .opacity
+																					.animation(.linear.delay(0.1 + 0.025 * Double(notches - index))),
+																				removal: .move(edge: .bottom)))
 						}
 					}
 				}
