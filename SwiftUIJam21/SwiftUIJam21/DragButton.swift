@@ -21,8 +21,8 @@ struct DragButton: View {
 				.shadow(color: Color(white: 0, opacity: 0.25), radius: 3, x: 0, y: 3)
 			Circle()
 				.stroke(Color(.systemGray5))
-			Text("+")
-				.monospacedDigit()
+			Image(systemName: "plus")
+				.foregroundColor(.primary)
 		}
 		.frame(width: thumbSize, height: thumbSize)
 		.onTapGesture {
@@ -31,30 +31,7 @@ struct DragButton: View {
 			}
 		}
 		.background(alignment: .bottom) {
-			ZStack {
-				Capsule()
-					.fill(.black)
-				VStack(spacing: 0) {
-					ForEach(0..<notches) { index in
-						if index != 0 {
-							Spacer(minLength: 0)
-								.layoutPriority(0)
-						}
-						if expanded {
-							Capsule()
-								.fill(Color(.systemRed))
-								.frame(height: 1 + Double(notches - index) * 0.2)
-								.transition(.asymmetric(insertion: .opacity
-																					.animation(.linear.delay(0.1 + 0.025 * Double(notches - index))),
-																				removal: .move(edge: .bottom)))
-						}
-					}
-				}
-				.padding(.horizontal, 4)
-				.padding(.top, expanded ? 15 : 0)
-				.padding(.bottom, expanded ? thumbSize + 5 : 9)
-			}
-			.frame(height: expanded ? expandedHeight : thumbSize)
+			Track(thumbSize: thumbSize, expandedHeight: expandedHeight, notches: notches, expanded: expanded)
 		}
 	}
 }
