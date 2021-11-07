@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C84D7A332736FB1C00D278E5 /* DragButtonTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D7A322736FB1C00D278E5 /* DragButtonTrack.swift */; };
 		C84D7A35273704EC00D278E5 /* DragButtonIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D7A34273704EC00D278E5 /* DragButtonIndicator.swift */; };
+		C84D7A382737F9E000D278E5 /* CGMath in Frameworks */ = {isa = PBXBuildFile; productRef = C84D7A372737F9E000D278E5 /* CGMath */; };
 		C8B178A32735BE8C00A53E69 /* SwiftUIJam21App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B178A22735BE8C00A53E69 /* SwiftUIJam21App.swift */; };
 		C8B178A52735BE8C00A53E69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B178A42735BE8C00A53E69 /* ContentView.swift */; };
 		C8B178A72735BE8D00A53E69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B178A62735BE8D00A53E69 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C84D7A382737F9E000D278E5 /* CGMath in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,9 @@
 			dependencies = (
 			);
 			name = SwiftUIJam21;
+			packageProductDependencies = (
+				C84D7A372737F9E000D278E5 /* CGMath */,
+			);
 			productName = SwiftUIJam21;
 			productReference = C8B1789F2735BE8C00A53E69 /* SwiftUIJam21.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +125,9 @@
 				Base,
 			);
 			mainGroup = C8B178962735BE8C00A53E69;
+			packageReferences = (
+				C84D7A362737F9E000D278E5 /* XCRemoteSwiftPackageReference "CGMath" */,
+			);
 			productRefGroup = C8B178A02735BE8C00A53E69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -353,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C84D7A362737F9E000D278E5 /* XCRemoteSwiftPackageReference "CGMath" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EmilioPelaez/CGMath";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C84D7A372737F9E000D278E5 /* CGMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C84D7A362737F9E000D278E5 /* XCRemoteSwiftPackageReference "CGMath" */;
+			productName = CGMath;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C8B178972735BE8C00A53E69 /* Project object */;
 }

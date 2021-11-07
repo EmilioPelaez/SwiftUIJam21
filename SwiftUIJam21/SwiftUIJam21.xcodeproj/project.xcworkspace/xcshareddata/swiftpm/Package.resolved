@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CGMath",
+        "repositoryURL": "https://github.com/EmilioPelaez/CGMath",
+        "state": {
+          "branch": "master",
+          "revision": "352dc9a0c5ea8db162714944c68de1fa7ae3e4bf",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

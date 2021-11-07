@@ -5,6 +5,7 @@
 //  Created by Emilio Peláez on 5/11/21.
 //
 
+import CGMath
 import SwiftUI
 
 struct DragButton: View {
@@ -53,7 +54,7 @@ struct DragButton: View {
 				}
 				let distance = min(0, max(-expandedHeight + thumbSize, gesture.translation.height))
 				offset = distance
-				value = Int(abs(distance))
+				value = Int(abs(distance).remap(from: (0, expandedHeight - thumbSize), to: (1, 100)))
 			}
 			.onEnded { _ in
 				withAnimation {
