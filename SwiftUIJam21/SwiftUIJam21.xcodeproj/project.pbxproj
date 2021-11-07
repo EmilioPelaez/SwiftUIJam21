@@ -40,6 +40,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C84D7A39273852A600D278E5 /* DragButton */ = {
+			isa = PBXGroup;
+			children = (
+				C8B178B02735BF4200A53E69 /* DragButton.swift */,
+				C84D7A322736FB1C00D278E5 /* DragButtonTrack.swift */,
+				C84D7A34273704EC00D278E5 /* DragButtonIndicator.swift */,
+			);
+			path = DragButton;
+			sourceTree = "<group>";
+		};
 		C8B178962735BE8C00A53E69 = {
 			isa = PBXGroup;
 			children = (
@@ -59,13 +69,11 @@
 		C8B178A12735BE8C00A53E69 /* SwiftUIJam21 */ = {
 			isa = PBXGroup;
 			children = (
+				C84D7A39273852A600D278E5 /* DragButton */,
 				C8B178A22735BE8C00A53E69 /* SwiftUIJam21App.swift */,
 				C8B178A42735BE8C00A53E69 /* ContentView.swift */,
 				C8B178A62735BE8D00A53E69 /* Assets.xcassets */,
 				C8B178A82735BE8D00A53E69 /* Preview Content */,
-				C8B178B02735BF4200A53E69 /* DragButton.swift */,
-				C84D7A322736FB1C00D278E5 /* DragButtonTrack.swift */,
-				C84D7A34273704EC00D278E5 /* DragButtonIndicator.swift */,
 			);
 			path = SwiftUIJam21;
 			sourceTree = "<group>";

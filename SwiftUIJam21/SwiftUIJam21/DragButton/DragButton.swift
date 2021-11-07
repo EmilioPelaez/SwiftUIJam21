@@ -9,13 +9,23 @@ import CGMath
 import SwiftUI
 
 struct DragButton: View {
-	let thumbSize: Double = 35
-	let expandedHeight: Double = 125
-	let notches: Int = 10
+	let thumbSize: Double
+	let expandedHeight: Double
+	let notches: Int
 	
-	@State var expanded = false
+	@State var expanded: Bool
 	@State var offset: Double = 0
 	@State var value: Int = 1
+	
+	init(thumbSize: Double = 35, expandedHeight: Double = 125, notches: Int = 10, expanded: Bool = false) {
+		guard expandedHeight > thumbSize else {
+			preconditionFailure("expandedHeight has to be larger than thumbSize")
+		}
+		self.thumbSize = thumbSize
+		self.expandedHeight = expandedHeight
+		self.notches = notches
+		self.expanded = expanded
+	}
 	
 	var body: some View {
 		Group {
