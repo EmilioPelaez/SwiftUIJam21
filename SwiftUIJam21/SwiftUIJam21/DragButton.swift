@@ -14,6 +14,7 @@ struct DragButton: View {
 	
 	@State var expanded = false
 	@State var offset: Double = 0
+	@State var value: Int = 1
 	
 	var body: some View {
 		Group {
@@ -30,18 +31,29 @@ struct DragButton: View {
 		}
 		.frame(width: thumbSize, height: thumbSize)
 		.background(alignment: .bottom) {
-			Track(thumbSize: thumbSize, expandedHeight: expandedHeight, notches: notches, expanded: expanded)
+			VStack {
+				if expanded{
+					Indicator(value: "\(value)")
+					.frame(width: 35, height: 40)
+					.transition(.asymmetric(insertion: .scale(scale: 0.02, anchor: .bottom).animation(.linear.delay(0.25)),
+																	removal: .opacity))
+				}
+				Track(thumbSize: thumbSize, expandedHeight: expandedHeight, notches: notches, expanded: expanded)
+			}
+			
 		}
 		.gesture(drag)
 	}
 	
 	var drag: some Gesture {
-		DragGesture()
-			.onChanged { value in
+		DragGesture(minimumDistance: 0)
+			.onChanged { gesture in
 				if !expanded {
-					return withAnimation { expanded = true }
+					withAnimation { expanded = true }
 				}
-				offset = min(0, max(-expandedHeight + thumbSize, value.translation.height))
+				let distance = min(0, max(-expandedHeight + thumbSize, gesture.translation.height))
+				offset = distance
+				value = Int(abs(distance))
 			}
 			.onEnded { _ in
 				withAnimation {
@@ -54,8 +66,15 @@ struct DragButton: View {
 
 struct DragButton_Previews: PreviewProvider {
 	static var previews: some View {
-		DragButton()
-		//			.previewLayout(.fixed(width: 55, height: 55))
-		//			.padding(.top, 90)
+		DragButton(expanded: true)
+			.frame(width: 35, height: 170, alignment: .bottom)
+			.padding()
+			.previewLayout(.sizeThatFits)
+		
+		DragButton(expanded: true)
+			.frame(width: 35, height: 170, alignment: .bottom)
+			.padding()
+			.previewLayout(.sizeThatFits)
+			.colorScheme(.dark)
 	}
 }

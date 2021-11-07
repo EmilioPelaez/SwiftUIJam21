@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C84D7A332736FB1C00D278E5 /* DragButtonTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D7A322736FB1C00D278E5 /* DragButtonTrack.swift */; };
+		C84D7A35273704EC00D278E5 /* DragButtonIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D7A34273704EC00D278E5 /* DragButtonIndicator.swift */; };
 		C8B178A32735BE8C00A53E69 /* SwiftUIJam21App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B178A22735BE8C00A53E69 /* SwiftUIJam21App.swift */; };
 		C8B178A52735BE8C00A53E69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B178A42735BE8C00A53E69 /* ContentView.swift */; };
 		C8B178A72735BE8D00A53E69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B178A62735BE8D00A53E69 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		C84D7A322736FB1C00D278E5 /* DragButtonTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragButtonTrack.swift; sourceTree = "<group>"; };
+		C84D7A34273704EC00D278E5 /* DragButtonIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragButtonIndicator.swift; sourceTree = "<group>"; };
 		C8B1789F2735BE8C00A53E69 /* SwiftUIJam21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIJam21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B178A22735BE8C00A53E69 /* SwiftUIJam21App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIJam21App.swift; sourceTree = "<group>"; };
 		C8B178A42735BE8C00A53E69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				C8B178A82735BE8D00A53E69 /* Preview Content */,
 				C8B178B02735BF4200A53E69 /* DragButton.swift */,
 				C84D7A322736FB1C00D278E5 /* DragButtonTrack.swift */,
+				C84D7A34273704EC00D278E5 /* DragButtonIndicator.swift */,
 			);
 			path = SwiftUIJam21;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8B178A52735BE8C00A53E69 /* ContentView.swift in Sources */,
+				C84D7A35273704EC00D278E5 /* DragButtonIndicator.swift in Sources */,
 				C8B178B12735BF4200A53E69 /* DragButton.swift in Sources */,
 				C8B178A32735BE8C00A53E69 /* SwiftUIJam21App.swift in Sources */,
 				C84D7A332736FB1C00D278E5 /* DragButtonTrack.swift in Sources */,
